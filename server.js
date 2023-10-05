@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import morgan from 'morgan';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoute.js'
-import taskRoutes from './routes/taskRoutes.js'
+
 
 import cors from 'cors'
 
@@ -22,7 +22,7 @@ app.use(morgan('dev'))
 
 //routes
 app.use('/api/v1/auth', authRoutes)
-app.use('/api/v1/task', taskRoutes)
+//app.use('/api/v1/task', taskRoutes)
 
 app.get('/', (req, res)=>{
     res.send("<h1>Assignment Techisor</h1>")

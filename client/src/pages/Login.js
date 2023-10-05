@@ -42,7 +42,7 @@ const Login = () => {
 
   return (
     <Layout>
-    <div className='register'>
+    <div className='form-container'>
       <h1>Login Page</h1>
       <form onSubmit={handleSubmit}>
 <div className="mb-3">

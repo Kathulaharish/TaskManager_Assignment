@@ -41,14 +41,24 @@ class TaskList extends Component {
     const { tasks, newTask } = this.state;
 
     return (
-      <div>
+      <div className='form-container'>
+        <div>
+          <input
+            type="text"
+            className='m-3 w-70'
+            value={newTask}
+            onChange={this.handleInputChange}
+            />
+          <button className='p-1' onClick={this.addTask}>Add Task</button>
+        </div>
         <h1>Task List</h1>
         <ul>
           {tasks.map((task) => (
             <li key={task.id}>
               {task.text}
-              <button onClick={() => this.deleteTask(task.id)}>Delete</button>
+              <button className='m-2 p-1' onClick={() => this.deleteTask(task.id)}>Delete</button>
               <input
+                className='m-2 p-1'
                 type="text"
                 value={task.text}
                 onChange={(e) => this.updateTask(task.id, e.target.value)}
@@ -56,14 +66,6 @@ class TaskList extends Component {
             </li>
           ))}
         </ul>
-        <div>
-          <input
-            type="text"
-            value={newTask}
-            onChange={this.handleInputChange}
-          />
-          <button onClick={this.addTask}>Add Task</button>
-        </div>
       </div>
     );
   }

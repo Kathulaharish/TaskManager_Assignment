@@ -36,7 +36,7 @@ const Register = () => {
     }
   return (
     <Layout>
-      <div className='register'>
+      <div className='form-container'>
         <h1>Register Page</h1>
         <form onSubmit={handleSubmit}>
   <div className="mb-3">
